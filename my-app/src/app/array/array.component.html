@@ -2,32 +2,32 @@
 
 
 <div>
-    <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+    <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()" class="form">
         <div formArrayName="all">
             <ng-container *ngFor="let abc of reactiveForm.get('all').controls; index as i">
                 <div formGroupName="{{i}}">
                     <div style="margin-top: 30px;">
-                        <label>Name: </label>
-                        <input formControlName="name" type="text" required>
+                        <label class="form-label">Name</label>
+                        <input class="form-control" formControlName="name" type="text" required>
                     </div>
                     <div>
-                        <label>Age: </label>
-                        <input formControlName="age" type="number" required>
+                        <label class="form-label">Age</label>
+                        <input class="form-control" formControlName="age" type="number" required>
                     </div>
                     <div>
-                        <label>Email: </label>
-                        <input formControlName="email" type="email" required>
+                        <label class="form-label">Email: </label>
+                        <input class="form-control" formControlName="email" type="email" required>
                     </div>
                     <div>
-                        <button type="submit" class="mt">Submit</button>
+                        <button type="submit" class="mt btn btn-primary">Submit</button>
                     </div>
                     <div>
-                        <button (click)="onRemove(i)" class="mt">Remove</button>
+                        <button (click)="onRemove(i)" class="mt btn brn-danger">Remove</button>
                     </div>
                 </div>
             </ng-container>
             <div>
-                <button (click)="onAdd()" class="mt">Form Add</button>
+                <button (click)="onAdd()" class="mt btn btn-warning">Form Add</button>
             </div>
         </div>
     </form>
