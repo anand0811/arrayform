@@ -6,15 +6,15 @@
         <div formArrayName="all">
             <ng-container *ngFor="let abc of reactiveForm.get('all').controls; index as i">
                 <div formGroupName="{{i}}">
-                    <div style="margin-top: 30px;">
+                    <div style="margin-top: 30px;" class="col-5">
                         <label class="form-label">Name</label>
                         <input class="form-control" formControlName="name" type="text" required>
                     </div>
-                    <div>
+                    <div class="col-5">
                         <label class="form-label">Age</label>
                         <input class="form-control" formControlName="age" type="number" required>
                     </div>
-                    <div>
+                    <div class="col-5">
                         <label class="form-label">Email: </label>
                         <input class="form-control" formControlName="email" type="email" required>
                     </div>
